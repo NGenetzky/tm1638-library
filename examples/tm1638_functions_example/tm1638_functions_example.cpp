@@ -19,14 +19,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <TM1638.h>
 #include <InvertedTM1638.h>
 
-#define NO_MODULES  2
+#define NO_MODULES  1
 
 // define a regular module and a inverted module
-TM1638 module1(3, 2, 4);
-InvertedTM1638 module2(3, 2, 5);
+TM1638 module1(D4, D5, D6);
+// InvertedTM1638 module2(3, 2, 5);
 TM1638* modules[NO_MODULES] = {
   &module1,
-  &module2
+  // &module2
 };
 byte modes[NO_MODULES];
 
